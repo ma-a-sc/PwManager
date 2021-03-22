@@ -34,9 +34,12 @@ to store your fernet key somewhere safe.
     # Generates the Fernet key which is needed for the encryption of the 
     # passwords later on.
     fernet_key = Fernet.generate_key()
+
+    fernet_key2 = fernet_key.decode()
+
     
     print(f"""
-Your Fernet key is: {fernet_key}
+Your Fernet key is: {fernet_key2}
 Pls store it offline and not on the same pc as the passwordmanager itself. 
 Security is compromised otherwise.
 """)
